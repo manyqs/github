@@ -8,6 +8,7 @@ test('test', async ({ page }) => {
   await test.step('Full Page Screenshot', async () => {
     await test.info().attach('Full Page Screenshot', { body: privacyScreenshot, contentType: 'image/png' });
   });
+  
   await expect(page.getByRole('heading', { name: '登入' })).toBeVisible();
   await expect(page.getByPlaceholder('電子郵件 *')).toBeVisible();
   await expect(page.getByPlaceholder('密碼 *')).toBeVisible();
